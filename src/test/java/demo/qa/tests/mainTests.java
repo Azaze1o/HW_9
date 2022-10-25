@@ -25,7 +25,7 @@ public class mainTests extends BaseTest {
 
     @Test
     @DisplayName("selenide")
-    public void checkNameIssueSelenide() {
+    public void checkIssueSelenide() {
 
         mainPage.openPage().searchInputClick().searchInputSetValue(REPO_LINK).searchInputSubmit();
         searchPage.repoLinkClick();
@@ -34,7 +34,7 @@ public class mainTests extends BaseTest {
 
     @Test
     @DisplayName("lamda step")
-    public void checkNameIssueLambdaOpen() {
+    public void checkIssueLambda() {
 
         step("Открываем главную страницу", () -> {
             mainPage.openPage();
@@ -58,7 +58,7 @@ public class mainTests extends BaseTest {
 
     @Test
     @DisplayName("test with @Step")
-    public void checkNameIssueAnnotationStep() {
+    public void checkIssueStep() {
 
         StepsWeb webSteps = new StepsWeb();
 
