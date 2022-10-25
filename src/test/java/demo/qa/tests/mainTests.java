@@ -56,17 +56,17 @@ public class mainTests extends BaseTest {
         });
     }
 
-    @Test
     @DisplayName("test with @Step")
+    @Test
     public void checkIssueStep() {
 
-        StepsWeb webSteps = new StepsWeb();
+        StepsWeb steps = new StepsWeb();
 
-        webSteps.openMainPage();
-        webSteps.searchRepo(REPO_LINK);
-        webSteps.clickOnLinkRepo();
-        webSteps.clickIssueTab();
-        webSteps.checkIssueTitle(ISSUE_NAME);
+        steps.openMainPage();
+        steps.searchRepo(REPO_LINK);
+        steps.clickOnLinkRepo();
+        steps.clickIssueTab();
+        steps.checkIssueTitle(ISSUE_NAME);
     }
 
 }

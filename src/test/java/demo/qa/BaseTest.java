@@ -15,7 +15,7 @@ public class BaseTest {
 
         Configuration.baseUrl = "https://github.com";
         Configuration.browserSize = "1920x1080";
-        Configuration.holdBrowserOpen=true;
+        //Configuration.holdBrowserOpen=true;
 
     }
 
