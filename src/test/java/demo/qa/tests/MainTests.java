@@ -11,7 +11,7 @@ import demo.qa.pages.Repos;
 import demo.qa.pages.Search;
 import demo.qa.steps.StepsWeb;
 
-public class mainTests extends BaseTest {
+public class MainTests extends BaseTest {
 
     private static final String REPO_LINK = "Azaze1o/HW_8";
 
@@ -36,22 +36,22 @@ public class mainTests extends BaseTest {
     @DisplayName("lamda step")
     public void checkIssueLambda() {
 
-        step("Îòêðûâàåì ãëàâíóþ ñòðàíèöó", () -> {
+        step("ÐžÑ‚ÐºÑ€Ñ‹Ð²Ð°ÐµÐ¼ Ð³Ð»Ð°Ð²Ð½ÑƒÑŽ ÑÑ‚Ñ€Ð°Ð½Ð¸Ñ†Ñƒ", () -> {
             mainPage.openPage();
         });
-        step("Èùåì ðåïîçèòîðèé " + REPO_LINK, () -> {
+        step("Ð˜Ñ‰ÐµÐ¼ Ñ€ÐµÐ¿Ð¾Ð·Ð¸Ñ‚Ð¾Ñ€Ð¸Ð¹ " + REPO_LINK, () -> {
             mainPage.searchInputClick().searchInputSetValue(REPO_LINK).searchInputSubmit();
         });
 
-        step("Êëèêàåì ïî ññûëêå ðåïîçèòîðèÿ " + REPO_LINK, () -> {
+        step("ÐšÐ»Ð¸ÐºÐ°ÐµÐ¼ Ð¿Ð¾ ÑÑÑ‹Ð»ÐºÐµ Ñ€ÐµÐ¿Ð¾Ð·Ð¸Ñ‚Ð¾Ñ€Ð¸Ñ " + REPO_LINK, () -> {
             searchPage.repoLinkClick();
         });
 
-        step("Íàæèìàåì íà Issues", () -> {
+        step("ÐÐ°Ð¶Ð¸Ð¼Ð°ÐµÐ¼ Ð½Ð° Issues", () -> {
             repoPage.issueTabClick();
         });
 
-        step("Ïðîâåðÿåì issue " + ISSUE_NAME, () -> {
+        step("ÐŸÑ€Ð¾Ð²ÐµÑ€ÑÐµÐ¼ issue " + ISSUE_NAME, () -> {
             repoPage.checkIssueTitle(ISSUE_NAME);
         });
     }
